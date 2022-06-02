@@ -9,10 +9,6 @@
 - ReactJS
 - Redux
 
-## Live Demo
-- [Netlify](https://mellifluous-frangollo-905938.netlify.app/)
-- [Heroku](https://powerful-fortress-31536.herokuapp.com/)
-
 ## Getting Started
 
 Clonse the repository using `git clonse git@github.com:aimalamiri/Bookstore-With-React.git`.
