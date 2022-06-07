@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBookAction } from '../redux/books/books';
 
 const AddBookForm = () => {
@@ -19,7 +20,8 @@ const AddBookForm = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (title.trim() !== '' && author.trim() !== '') {
-      dispatch(addBookAction({ title, author }));
+      const id = uuidv4();
+      dispatch(addBookAction({ id, title, author }));
       setTitle('');
       setAuthor('');
     }

@@ -19,7 +19,7 @@ export const addBookAction = (book) => ({
   book,
 });
 
-export const removeBookAction = () => ({
+export const removeBookAction = (bookId) => ({
   type: REMOVE_BOOK,
-  book_id: null,
+  bookId,
 });
