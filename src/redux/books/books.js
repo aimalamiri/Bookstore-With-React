@@ -7,7 +7,7 @@ export default (state = [], action) => {
       return [...state, action.book];
 
     case REMOVE_BOOK:
-      return state.map((b) => action.id !== b.id ?? b);
+      return [...state.filter((b) => b.id !== action.bookId)];
 
     default:
       return state;
