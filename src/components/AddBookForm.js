@@ -18,7 +18,11 @@ const AddBookForm = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    dispatch(addBookAction({ title, author }));
+    if (title.trim() !== '' && author.trim() !== '') {
+      dispatch(addBookAction({ title, author }));
+      setTitle('');
+      setAuthor('');
+    }
   };
 
   return (
