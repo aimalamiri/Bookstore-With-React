@@ -4,22 +4,22 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 export default (state = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, { book: 'new book' }];
+      return [...state, action.book];
 
     case REMOVE_BOOK:
-      return state.map((b) => action.id !== b.id ?? b);
+      return [...state.filter((b) => b.id !== action.bookId)];
 
     default:
       return state;
   }
 };
 
-export const addBookAction = () => ({
+export const addBookAction = (book) => ({
   type: ADD_BOOK,
-  book: {},
+  book,
 });
 
-export const removeBookAction = () => ({
+export const removeBookAction = (bookId) => ({
   type: REMOVE_BOOK,
-  book_id: null,
+  bookId,
 });
