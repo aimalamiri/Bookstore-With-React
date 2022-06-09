@@ -20,7 +20,7 @@ body {
 
 nav {
   background-color: var(--white);
-  padding: 1.81rem 6.25rem;
+  padding: 1.43rem 6.25rem;
   border-bottom: solid 1px var(--white-two);
 }
 
@@ -32,8 +32,6 @@ nav {
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
   column-gap: 2.56rem;
 }
 
@@ -50,8 +48,26 @@ nav {
   transition: all 0.2s ease-in-out;
 }
 
+.nav-user {
+  border: 1px solid var(--white-two);
+  padding: 0.87rem 0.87rem 0.8rem 0.87rem;
+  border-radius: 50%;
+}
+
+.nav-user > img {
+  filter: invert(40%) sepia(75%) saturate(3235%) hue-rotate(189deg) brightness(103%) contrast(107%);
+}
+
 .flex {
   display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .p-2 {
