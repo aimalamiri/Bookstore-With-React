@@ -179,6 +179,9 @@ input {
 
 .book-button {
   width: 15.3%;
+}
+
+.btn {
   padding: 0.801rem 1.188rem;
   border-radius: 3px;
   background-color: var(--light-blue);

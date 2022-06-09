@@ -38,7 +38,7 @@ const AddBookForm = () => {
     <form className="book-form" onSubmit={submitHandler}>
       <input type="text" name="title" className="input-title" placeholder="Book title" onChange={changeTitle} value={title} />
       <input type="text" name="author" className="input-author" placeholder="Book author" onChange={changeAuthor} value={author} />
-      <button type="submit" className="book-button">ADD BOOK</button>
+      <button type="submit" className="btn book-button">ADD BOOK</button>
     </form>
   );
 };
