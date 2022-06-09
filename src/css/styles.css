@@ -155,7 +155,8 @@ nav {
 .book-form {
   display: flex;
   justify-content: space-between;
-  row-gap: 2.125rem
+  row-gap: 2.125rem;
+  margin-top: 1.188rem;
 }
 
 input {

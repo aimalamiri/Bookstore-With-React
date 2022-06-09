@@ -35,7 +35,7 @@ const AddBookForm = () => {
   };
 
   return (
-    <form className="mt-2.3 book-form" onSubmit={submitHandler}>
+    <form className="book-form" onSubmit={submitHandler}>
       <input type="text" name="title" className="input-title" placeholder="Book title" onChange={changeTitle} value={title} />
       <input type="text" name="author" className="input-author" placeholder="Book author" onChange={changeAuthor} value={author} />
       <button type="submit" className="book-button">ADD BOOK</button>
