@@ -131,6 +131,12 @@ nav {
   border-right: solid 1px var(--white-two);
 }
 
+.separator {
+  height: 0.125rem;
+  margin: 2.5rem 0;
+  border: solid 1px var(--white-two);
+}
+
 .container {
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);

@@ -20,6 +20,7 @@ const Books = () => {
           <Book key={book.item_id} book={book} />
         ))}
       </div>
+      <hr className="separator" />
       <AddBookForm />
     </div>
   );
