@@ -13,7 +13,7 @@ export default (state = [], action) => {
       return [...state, action.book];
 
     case REMOVE_BOOK:
-      return [...state.filter((b) => b.id !== action.bookId)];
+      return [...state.filter((b) => b.item_id !== action.item_id)];
 
     default:
       return state;
@@ -31,12 +31,12 @@ export const getBooksAction = () => async (dispatch) => {
 
 export const addBookAction = (book) => async (dispatch) => {
   const request = await axios.post('books', book);
-  if (request.data === 'Created') {
+  if (request.status === 201) {
     dispatch({ type: ADD_BOOK, book });
   }
 };
 
-export const removeBookAction = (bookId) => ({
-  type: REMOVE_BOOK,
-  bookId,
-});
+export const removeBookAction = (bookId) => async (dispatch) => {
+  const request = await axios.delete(`books/${bookId}`);
+  if (request.status === 201) dispatch({ type: REMOVE_BOOK, item_id: bookId });
+};
