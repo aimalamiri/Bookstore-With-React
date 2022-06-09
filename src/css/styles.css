@@ -33,7 +33,7 @@ nav {
 .nav-title {
   font-size: 1.87rem;
   color: var(--light-blue);
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   margin-right: 2.93rem;
 }
 
@@ -46,7 +46,7 @@ nav {
   font-size: 0.81rem;
   font-weight: normal;
   text-decoration: none;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link:hover {
@@ -145,7 +145,7 @@ nav {
 }
 
 .form-title {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
   color: var(--warm-gray);
@@ -186,7 +186,7 @@ input {
   border: none;
   color: var(--white);
   font-size: 0.813rem;
-  font-family: RobotSlab;
+  font-family: 'RobotSlab', serif;
   font-weight: bold;
 }
 
@@ -194,8 +194,6 @@ input {
   opacity: 0.8;
   transition: all 0.2s ease-in-out;
 }
-
-
 
 .container {
   padding-left: var(--container-padding);
@@ -215,7 +213,7 @@ input {
 }
 
 .font-montserrat {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-roboto-slab {
