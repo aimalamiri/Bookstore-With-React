@@ -22,13 +22,19 @@ export default (state = [], action) => {
 
 export const getBooksAction = () => async (dispatch) => {
   const response = await axios.get('books');
-  dispatch({ type: LIST_BOOKS, books: response.data });
+  const data = Object.keys(response.data).map((book) => ({
+    item_id: book,
+    ...response.data[book][0],
+  }));
+  dispatch({ type: LIST_BOOKS, books: data });
 };
 
-export const addBookAction = (book) => ({
-  type: ADD_BOOK,
-  book,
-});
+export const addBookAction = (book) => async (dispatch) => {
+  const request = await axios.post('books', book);
+  if (request.data === 'Created') {
+    dispatch({ type: ADD_BOOK, book });
+  }
+};
 
 export const removeBookAction = (bookId) => ({
   type: REMOVE_BOOK,

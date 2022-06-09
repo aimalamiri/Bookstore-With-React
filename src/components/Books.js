@@ -15,8 +15,8 @@ const Books = () => {
 
   return (
     <div>
-      {Object.keys(books).map((book) => (
-        <Book key={Math.random() * 100} book={books[book][0]} />
+      {books.map((book) => (
+        <Book key={book.item_id} book={book} />
       ))}
       <AddBookForm />
     </div>
