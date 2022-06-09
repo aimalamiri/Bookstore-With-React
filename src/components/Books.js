@@ -14,10 +14,12 @@ const Books = () => {
   }, []);
 
   return (
-    <div>
-      {books.map((book) => (
-        <Book key={book.item_id} book={book} />
-      ))}
+    <div className="container mt-2.3">
+      <div className="books-list">
+        {books.map((book) => (
+          <Book key={book.item_id} book={book} />
+        ))}
+      </div>
       <AddBookForm />
     </div>
   );

@@ -4,7 +4,7 @@
   --white-two: #e8e8e8;
   --light-blue: #0290ff;
   --black: #121212;
-  --black-two: #888;
+  --container-padding: 6.25rem;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
 
 nav {
   background-color: var(--white);
-  padding: 1.43rem 6.25rem;
+  padding: 1.43rem var(--container-padding);
   border-bottom: solid 1px var(--white-two);
 }
 
@@ -44,7 +44,7 @@ nav {
 }
 
 .nav-link:hover {
-  color: var(--black-two);
+  opacity: 0.5;
   transition: all 0.2s ease-in-out;
 }
 
@@ -56,6 +56,22 @@ nav {
 
 .nav-user > img {
   filter: invert(40%) sepia(75%) saturate(3235%) hue-rotate(189deg) brightness(103%) contrast(107%);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-blue {
+  color: var(--light-blue);
+}
+
+.opacity-5 {
+  opacity: 0.5;
 }
 
 .flex {
@@ -70,10 +86,92 @@ nav {
   align-items: center;
 }
 
+.books-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.938rem;
+}
+
+.card {
+  padding: 1.75rem 1.68rem;
+}
+
+.book-title {
+  height: 1.813rem;
+}
+
+.theme-height {
+  height: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.actions {
+  margin-top: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-link {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: var(--light-blue);
+  height: 1.125rem;
+  margin-bottom: 0.25rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.v-line {
+  height: 1.5rem;
+  width: 0.12rem;
+  margin: 0 1.06rem 0 0.938rem;
+  border-right: solid 1px var(--white-two);
+}
+
+.container {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.font-lg {
+  font-size: 1.375rem;
+}
+
+.font-montserrat {
+  font-family: Montserrat;
+}
+
+.font-roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
 .p-2 {
   padding: 2rem;
 }
 
 .ml-1 {
   margin-left: 1rem;
+}
+
+.mt-2\.3 {
+  margin-top: 2.3rem;
 }
