@@ -21,6 +21,7 @@ const Books = () => {
         ))}
       </div>
       <hr className="separator" />
+      <h2 className="form-title">ADD NEW BOOK</h2>
       <AddBookForm />
     </div>
   );

@@ -1,10 +1,16 @@
 :root {
   --light-gray: #fafafa;
+  --warm-gray: #888;
   --white: #fff;
   --white-two: #e8e8e8;
   --light-blue: #0290ff;
   --black: #121212;
   --container-padding: 6.25rem;
+}
+
+::placeholder {
+  color: #000;
+  opacity: 0.2;
 }
 
 * {
@@ -133,9 +139,61 @@ nav {
 
 .separator {
   height: 0.125rem;
-  margin: 2.5rem 0;
+  margin-top: 2.5rem;
   border: solid 1px var(--white-two);
 }
+
+.form-title {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--warm-gray);
+  margin-top: 1.81rem;
+}
+
+.book-form {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 2.125rem
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.813rem 1.063rem;
+  background-color: var(--white);
+  border: solid 1px var(--white-two);
+  border-radius: 4px;
+  outline: none;
+  color: var(--warm-gray);
+}
+
+.input-title {
+  width: 55.3%;
+}
+
+.input-author {
+  width: 23.7%;
+}
+
+.book-button {
+  width: 15.3%;
+  padding: 0.801rem 1.188rem;
+  border-radius: 3px;
+  background-color: var(--light-blue);
+  outline: none;
+  border: none;
+  color: var(--white);
+  font-size: 0.813rem;
+  font-family: RobotSlab;
+  font-weight: bold;
+}
+
+.book-button:hover {
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+}
+
+
 
 .container {
   padding-left: var(--container-padding);
